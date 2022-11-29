@@ -1,0 +1,79 @@
+.loading-screen {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .6);
+    visibility: visible;
+    transition: .3s all;
+    opacity: 1;
+}
+
+.lds-heart {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg);
+    transform-origin: 40px 40px
+}
+
+.lds-heart div {
+    top: 32px;
+    left: 32px;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background: #d40000;
+    animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1)
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: #d40000
+}
+
+.lds-heart div:before {
+    left: -34px;
+    border-radius: 50% 0 0 50%
+}
+
+.lds-heart div:after {
+    top: -34px;
+    border-radius: 50% 50% 0 0
+}
+
+@keyframes lds-heart {
+    0% {
+        transform: scale(0.95)
+    }
+
+    5% {
+        transform: scale(1.1)
+    }
+
+    39% {
+        transform: scale(0.85)
+    }
+
+    45% {
+        transform: scale(1)
+    }
+
+    60% {
+        transform: scale(0.95)
+    }
+
+    100% {
+        transform: scale(0.9)
+    }
+}

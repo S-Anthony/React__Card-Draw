@@ -1,0 +1,55 @@
+.victory, .defeat, .draw{
+    position: fixed;
+    transition: .3s all;
+    animation: fade-in 1s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 30px;
+    border: 3px solid #d40000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .9);
+    visibility: visible;
+    transition: .3s all;
+    opacity: 1;
+    color: #fff;
+    font-size: 34px;
+    line-height: 3;
+    font-weight: 700;
+    word-break: break-word;
+    flex-direction: column;
+    row-gap: 50px;
+    width: max-content;
+    max-width: 90%;
+}
+.defeat p {
+    color: rgb(0, 0, 0);
+}
+.defeat {
+    background: rgba(196, 196, 196, 0.8);
+    border: 3px solid rgb(0, 0, 0);;
+}
+.victory p span, .defeat p span, .draw p span {
+    color: #d40000;
+}
+@media (max-width: 700px) {
+    .victory, .defeat, .draw{
+        font-size: 17px;
+        line-height: 1.5;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}

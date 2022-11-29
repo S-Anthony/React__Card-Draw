@@ -1,0 +1,29 @@
+.fail{
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .6);
+    visibility: visible;
+    transition: .3s all;
+    opacity: 1;
+    color: #fff;
+    font-size: 34px;
+    line-height: 3;
+    font-weight: 700;
+    word-break: break-word;
+    padding: 0 30px;
+}
+.fail p {
+    color: rgb(255, 255, 255);
+}
+@media (max-width: 700px) {
+    .fail{
+        font-size: 17px;
+        line-height: 1.5;
+    }
+}
